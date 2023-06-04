@@ -15,7 +15,7 @@ header{
     width: 100px;
     height: 36px;
     margin: 0 10px;
-    background-image: url(/encide-logo-crop.png);
+    background-image: url(encide-logo-crop.png);
     background-size: cover;
 }
 #nav li{
@@ -84,7 +84,7 @@ header{
 .coding-image{
     width: 480px;
     height: 210px;
-    background-image: url(/coding.png);
+    background-image: url(coding.png);
     background-size: cover;
 }
 
@@ -100,7 +100,7 @@ header{
     height: 160px;
     border: 2px black solid;
     border-radius: 10px;
-    background-image: url(/html-css-js.png);
+    background-image: url(html-css-js.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
