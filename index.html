@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENCIDE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9b661e24ef.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo"></div>
+      <nav class="navbar navigation">
+        <ul class="nav navbar-nav flex-row row navi-item">
+          <li class="col navi-item-li active-link" onclick="opentab('Home')">
+            Home
+          </li>
+          <li class="col navi-item-li" onclick="opentab('Practice')">
+            Practice
+          </li>
+          <li class="col navi-item-li" onclick="opentab('Compete')">Compete</li>
+          <li class="col navi-item-li" onclick="opentab('Courses')">Courses</li>
+          <li class="col navi-item-li" onclick="opentab('Certificates')">
+            Certificates
+          </li>
+        </ul>
+      </nav>
+      <ul class="nav navbar-nav flex-row row" id="nav">
+        <li class="col"><a href="">Sign In</a></li>
+        <li class="col"><a href="">Sign Up</a></li>
+      </ul>
+    </header>
+    <div class="hamburger">
+      <i class="fa-solid fa-chevron-down" onclick="openMenu()"></i>
+    </div>
+    <div class="hamburger-list" id="side-menu">
+      <ul class="nav navbar-nav flex-column col navi-item">
+        <i class="fa-solid fa-chevron-up" onclick="closeMenu()"></i>
+        <li class="row active-link" onclick="opentab('Home')">Home</li>
+        <li class="row" onclick="opentab('Practice')">Practice</li>
+        <li class="row" onclick="opentab('Compete')">Compete</li>
+        <li class="row" onclick="opentab('Courses')">Courses</li>
+        <li class="row" onclick="opentab('Certificates')">Certificates</li>
+      </ul>
+    </div>
+    <div class="container p-5">
+      <h2 class="heading">Let Your Skills Make The Speaking</h2>
+      <div class="row">
+        <div class="col">
+          <div class="for-students">
+            <h3>For Students</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+              pariatur consequatur recusandae dignissimos! Ad aliquam
+              reprehenderit iure libero molestiae fugiat.
+            </p>
+            <button class="btn btn-primary start-btn">Start Coding</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="for-business">
+            <h3>For Business</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+              pariatur consequatur recusandae dignissimos! Ad aliquam
+              reprehenderit iure libero molestiae fugiat.
+            </p>
+            <button class="btn btn-primary start-btn">Get Started</button>
+          </div>
+        </div>
+      </div>
+      <div class="coding-image-parent">
+        <div class="coding-image"></div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <h2 class="practice">Practice</h2>
+      <div class="continue-progress">
+        <div class="continue-progress-content">
+          <p>Continue to your HTML CSS JS Practice</p>
+        </div>
+      </div>
+    </div> -->
+
+    <script>
+      var tablinks = document.getElementsByClassName("navi-item-li");
+      var tabcontents = document.getElementsByClassName("CONTENT");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontents.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("side-menu");
+      function openMenu() {
+        sidemenu.style.top = "55px";
+      }
+      function closeMenu() {
+        sidemenu.style.top = "-225px";
+      }
+    </script>
+  </body>
+</html>

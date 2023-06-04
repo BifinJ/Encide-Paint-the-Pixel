@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+header{
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+}
+.logo{
+    width: 100px;
+    height: 36px;
+    margin: 0 10px;
+    background-image: url(/encide-logo-crop.png);
+    background-size: cover;
+}
+#nav li{
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+#nav li a{
+    color: white;
+    text-decoration: none;
+    padding-right: 24px;
+}
+.navi-item-li{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 20px;
+    position: relative;
+}
+.navi-item-li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff2268;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s ease;
+}
+.navi-item-li.active-link::after{
+    width: 100%;
+}
+.hamburger,.hamburger-list{
+    display: none;
+}
+
+
+
+
+
+.heading{
+    font-size: 50px;
+    font-weight:900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0;
+}
+.for-students,.for-business{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.coding-image-parent{
+    display: flex;
+    height: 220px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.coding-image{
+    width: 480px;
+    height: 210px;
+    background-image: url(/coding.png);
+    background-size: cover;
+}
+
+
+
+
+/* .practice{
+    font-size: 40px;
+    font-weight: 500;
+}
+.continue-progress{
+    width: 275px;
+    height: 160px;
+    border: 2px black solid;
+    border-radius: 10px;
+    background-image: url(/html-css-js.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.continue-progress-content{
+    width: 275px;
+    height: 160px;
+    background: linear-gradient(rgba(255, 0, 0, 0.806), rgba(0, 0, 0, 0.878));
+    border: 2px black solid;
+    border-radius: 10px;
+}
+.continue-progress-content p{
+    font-size: 30px;
+} */
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px){
+    header{
+        z-index: 4;
+    }
+    .navbar.navigation{
+        display: none;
+    }
+    .heading{
+        font-size: 25px;
+        font-weight: 600;
+        margin-top: 0px;
+    }
+    .coding-image-parent{
+        height: 130px;
+        margin-top: 10px;
+    }
+    .coding-image{
+        width: 200px;
+        height: 120px;
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        padding: 10px;
+    }
+    .fa-solid{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+    }
+    .hamburger-list{
+        display: block;
+        position: absolute;
+        top: -225px;
+        width: 100%;
+        background-color: whitesmoke;
+        z-index: 2;
+        transition: top 0.7s;
+    }
+    .hamburger-list ul li{
+        position: relative;
+        left: 35px;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        cursor: pointer;
+        padding: 0;
+        list-style: none;
+        padding: 5px;
+    }
+    .hamburger-list ul .fa-solid{
+        position: absolute;
+        top: 165px;
+        left: 10px;
+        cursor: pointer;
+    }
+    .for-students h3,.for-business h3{
+        font-size: 20px;
+    }
+    .for-students p,.for-business p{
+        font-size: 15px;
+    }
+    .start-btn{
+        font-size: 15px;
+    }
+}
